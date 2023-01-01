@@ -9,7 +9,7 @@ services:
       # - "443:443"
       - "8001:8001"
     depends_on:
-      - web
+      - bookwyrm_web
     networks:
       - main
     volumes:
@@ -36,7 +36,7 @@ services:
       - backups:/backups
     networks:
       - main
-  web:
+  bookwyrm_web:
     build: .
     env_file: .env
     command: gunicorn bookwyrm.wsgi:application --bind 0.0.0.0:8000
