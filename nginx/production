@@ -115,7 +115,7 @@ server {
     listen [::]:8001;
     listen 8001;
 
-    server_name your-domain.com www.your-domain.com;
+    server_name books.103.social;
 
     location / {
         proxy_pass http://web;
